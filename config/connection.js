@@ -11,18 +11,18 @@ if (process.env.JAWSDB_URL) {
     host: "localhost",
     user: "root",
     password: "terabyte55",
-    database: "burgers_db"
+    database: "burger_db"
   });
 };
 
-  // Make connection.
-  connection.connect(function (err) {
-    if (err) {
-      console.error("error connecting: " + err.stack);
-      return;
-    }
-    console.log("connected as id " + connection.threadId);
-  });
+// Make connection.
+connection.connect(function (err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
+});
 
-  // Export connection for our ORM to use.
-  module.exports = connection;
+// Export connection for our ORM to use.
+module.exports = connection;
